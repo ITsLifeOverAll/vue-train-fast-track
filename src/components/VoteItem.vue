@@ -1,7 +1,7 @@
 <template>
     <div class="card columns ">
         <div class="is-one-third image is-64x64 m-4">
-            <img v-bind:src="image" alt="Placeholder image">
+            <img v-bind:src="imageUrl" alt="Placeholder image">
         </div>
 
         <div class="card-content column">
@@ -30,7 +30,7 @@ const props = defineProps({
         type: String,
         required: true
     },
-    image: {
+    imageUrl: {
         type: String,
         required: true
     },
