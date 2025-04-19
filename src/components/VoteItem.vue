@@ -1,5 +1,5 @@
 <template>
-    <div class="card columns ">
+    <div class="card columns " :class="{ 'has-background-info': indexZero }">
         <div class="is-one-third image is-64x64 m-4">
             <img v-bind:src="item.imageUrl" alt="Placeholder image">
         </div>
@@ -26,9 +26,15 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
+import { defineProps } from 'vue'
 const props = defineProps({
     item: {
         type: Object,
+        required: true
+    },
+    index: {
+        type: Number,
         required: true
     }
 })
@@ -36,4 +42,8 @@ const props = defineProps({
 const voteUp = () => {
     props.item.votes++
 }
+
+const indexZero = computed(() => {
+    return props.index === 0;
+})
 </script>

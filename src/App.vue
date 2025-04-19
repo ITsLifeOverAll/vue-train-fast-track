@@ -7,8 +7,8 @@
     <div v-else class="has-text-centered">
       Please Vote!
     </div>
-    <div v-for="item in sortedItems" class="p-4">
-      <VoteItem :item="item" />
+    <div v-for="(item, index) in sortedItems" class="p-4">
+      <VoteItem :item="item" :index="index" />
     </div>
   </div>
 </template>
