@@ -6,6 +6,7 @@ import AboutView from '@/views/AboutView.vue'
 const routes = [
   { path: '/', component: HomeView },
   { path: '/about', component: AboutView },
+  { path: '/upvote', component: () => import('@/views/UpVoteView.vue') },
 ]
 
 const router = createRouter({
