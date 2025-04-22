@@ -4,14 +4,38 @@ import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
 
 const routes = [
-  { path: '/', component: HomeView },
-  { path: '/about', component: AboutView },
-  { path: '/upvote', component: () => import('@/views/UpVoteView.vue') },
+  {
+    path: '/',
+    component: HomeView,
+    meta: {
+      title: '首頁',
+    },
+  },
+  {
+    path: '/about',
+    component: AboutView,
+    meta: {
+      title: '關於我們',
+    },
+  },
+  {
+    path: '/upvote',
+    component: () => import('@/views/UpVoteView.vue'),
+    meta: {
+      title: 'Blog 投票',
+    },
+  },
 ]
 
 const router = createRouter({
   history: createWebHistory(),
   routes,
+})
+
+const DEFAULT_TITLE = 'Vue 高手直達車'
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title ? `${to.meta.title} | ${DEFAULT_TITLE}` : DEFAULT_TITLE
+  next()
 })
 
 export default router
