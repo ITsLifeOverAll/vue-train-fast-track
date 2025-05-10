@@ -26,10 +26,11 @@ const routes = [
     },
   },
   {
-    path: '/products',
+    path: '/products/:id',
     component: () => import('@/views/ProductItemView.vue'),
+    props: true,
     meta: {
-      title: '產品',
+      title: '產品詳細資訊',
     },
   },
 ]

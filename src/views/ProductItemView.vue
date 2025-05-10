@@ -30,6 +30,17 @@
 
 <script setup>
 import products from '@/data/foods'
-const product = products[0]
+
+const props = defineProps({
+    id: {
+        type: [Number, String],
+        required: true
+    }
+})
+
+const productId = Number(props.id)
+
+const product = products.find(product => product.id === productId)
+
 
 </script>
