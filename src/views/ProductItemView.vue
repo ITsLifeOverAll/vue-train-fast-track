@@ -31,6 +31,7 @@
 <script setup>
 import products from '@/data/foods'
 import { computed } from 'vue'
+import { useRoute } from 'vue-router'
 
 const props = defineProps({
     id: {
@@ -39,13 +40,12 @@ const props = defineProps({
     }
 })
 
+const route = useRoute()
 
 const product = computed(() => {
-    const product = products.find(product => product.id == props.id)
-    if (!product) {
-        throw new Error('Product not found')
-    }
-    return product
+    const id = route.params.id
+    return products.find(product => product.id === Number(id))
 })
+
 
 </script>
