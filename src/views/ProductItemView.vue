@@ -42,5 +42,4 @@ const productId = Number(props.id)
 
 const product = products.find(product => product.id === productId)
 
-
 </script>

@@ -27,11 +27,28 @@ const routes = [
   },
   {
     path: '/products/:id',
+    name: 'product',
     component: () => import('@/views/ProductItemView.vue'),
     props: true,
     meta: {
       title: '產品詳細資訊',
     },
+  },
+  {
+    path: '/products',
+    name: 'productlist',
+    component: () => import('@/views/ProductListView.vue'),
+    meta: {
+      title: '產品列表',
+    },
+    children: [
+      {
+        path: ':id',
+        name: 'productitem',
+        component: () => import('@/views/ProductItemView.vue'),
+        props: true,
+      },
+    ],
   },
 ]
 
