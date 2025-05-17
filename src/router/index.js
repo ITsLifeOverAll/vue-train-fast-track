@@ -6,6 +6,7 @@ import AboutView from '@/views/AboutView.vue'
 const routes = [
   {
     path: '/',
+    alias: '/home',
     component: HomeView,
     meta: {
       title: '首頁',
