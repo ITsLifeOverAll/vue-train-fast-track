@@ -7,6 +7,7 @@ const routes = [
   {
     path: '/',
     alias: '/home',
+    name: 'home',
     component: HomeView,
     meta: {
       title: '首頁',
@@ -58,6 +59,17 @@ const routes = [
         props: true,
       },
     ],
+  },
+  {
+    path: '/tabs',
+    name: 'tabs',
+    component: () => import('../views/TabsView.vue'),
+    meta: { title: 'Tabs Page' },
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: 'NotFound',
+    component: () => import('@/views/NotFoundView.vue'),
   },
 ]
 
