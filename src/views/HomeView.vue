@@ -1,4 +1,10 @@
 <template>
-    <h1 class="title is-3">Vue 高手直達車</h1>
-    <p class="subtitle is-5">這是一個 Vue 3 + Vite + Pinia + Vue Router 的範例專案</p>
+    <div class="container is-fluid">
+        <div class="title is-4 has-text-centered p-2">
+            線上課程 「Vue 高手直達車」
+        </div>
+        <div class="has-text-centered">
+            <img src="/Vue-express.png" alt="Vue Express" style="width: 50%;" />
+        </div>
+    </div>
 </template>
