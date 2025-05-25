@@ -4,7 +4,7 @@ import { computed, ref } from 'vue'
 export const useUserStore = defineStore('user', () => {
   const userId = ref(0)
   const userName = computed(() => {
-    ;`user ${userId.value}`
+    return `user ${userId.value}`
   })
   const isLogin = computed(() => {
     return userId.value > 0
