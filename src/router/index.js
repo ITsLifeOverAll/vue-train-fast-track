@@ -1,4 +1,5 @@
 import { createWebHistory, createRouter } from 'vue-router'
+import { useUserStore } from '@/stores/user.js'
 
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
@@ -42,6 +43,14 @@ const routes = [
     component: () => import('@/views/ProductListView.vue'),
     meta: {
       title: '產品列表',
+    },
+    beforeEnter: (to, from) => {
+      const userStore = useUserStore()
+      if (!userStore.isLogin) {
+        return { name: 'login', query: { redirect: to.fullPath } }
+      }
+      // 如果已經登入，則允許進入產品列表頁面
+      return true
     },
     children: [
       {
