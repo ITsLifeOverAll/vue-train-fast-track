@@ -68,14 +68,18 @@
 import { useUserStore } from '@/stores/user'
 import { storeToRefs } from 'pinia'
 import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 
 const userStore = useUserStore()
+const router = useRouter()
+
 // const isLogin = computed(() => userStore.isLogin)
 
 const { isLogin } = storeToRefs(userStore)
 
 const logout = () => {
     userStore.logout()
+    router.push('/')
 }
 
 </script>
