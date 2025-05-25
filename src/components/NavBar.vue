@@ -47,7 +47,35 @@
             </div>
 
             <div class="navbar-end">
+                <div class="navbar-item">
+                    <RouterLink v-if="!isLogin" to="/login" class="button is-primary is-small">
+                        登入
+                    </RouterLink>
+                    <div v-else class="is-flex is-align-items-center">
+                        <div class="mr-2">
+                            {{ userStore.userName }}
+                        </div>
+                        <button class="button is-small is-link" @click="logout">登出</button>
+                    </div>
+
+                </div>
             </div>
         </div>
     </nav>
 </template>
+
+<script setup>
+import { useUserStore } from '@/stores/user'
+import { storeToRefs } from 'pinia'
+import { computed } from 'vue'
+
+const userStore = useUserStore()
+// const isLogin = computed(() => userStore.isLogin)
+
+const { isLogin } = storeToRefs(userStore)
+
+const logout = () => {
+    userStore.logout()
+}
+
+</script>
