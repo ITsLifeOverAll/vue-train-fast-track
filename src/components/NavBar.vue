@@ -38,6 +38,9 @@
                         <RouterLink to="/tabs" class="navbar-item">
                             頁籤功能 (動態元件)
                         </RouterLink>
+                        <RouterLink to="/tap" class="navbar-item">
+                            點點看 (Slot, emit)
+                        </RouterLink>
                     </div>
                 </div>
 

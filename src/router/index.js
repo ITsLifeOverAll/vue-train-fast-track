@@ -84,6 +84,14 @@ const routes = [
     },
   },
   {
+    path: '/tap',
+    name: 'tap',
+    component: () => import('@/views/TapView.vue'),
+    meta: {
+      title: '點點看',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
