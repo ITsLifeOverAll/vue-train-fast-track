@@ -44,6 +44,9 @@
                         <RouterLink to="/promise" class="navbar-item">
                             Promise 練習
                         </RouterLink>
+                        <RouterLink to="/apidemo" class="navbar-item">
+                            API 呼叫練習
+                        </RouterLink>
                     </div>
                 </div>
 

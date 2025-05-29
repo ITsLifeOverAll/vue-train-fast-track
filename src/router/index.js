@@ -100,6 +100,14 @@ const routes = [
     },
   },
   {
+    path: '/apidemo',
+    name: 'apidemo',
+    component: () => import('@/views/ApiDemoView.vue'),
+    meta: {
+      title: 'API Demo',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
