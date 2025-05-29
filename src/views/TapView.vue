@@ -10,8 +10,9 @@
             <h2 class="subtitle is-4 has-text-centered">
                 {{ `Column ${index + 1}: ` }} {{ scores[index] }}
             </h2>
-            <BigButton class="button is-large is-fullwidth" :id="button.id" @strike="handleStrike">
+            <BigButton class="button is-large is-fullwidth" :id="index">
                 {{ button.text }}
+                <span class="p-2">( {{ lastTapId }} )</span>
             </BigButton>
         </div>
     </div>
@@ -21,27 +22,21 @@
 <script setup>
 import { ref, computed } from 'vue'
 import BigButton from '@/components/BigButton.vue'
+import { useTapScoreStore } from '@/stores/tapScore'
+import { storeToRefs } from 'pinia'
+const tapScoreStore = useTapScoreStore()
 
 const buttons = [
-    { id: 1, text: 'Button 1' },
-    { id: 2, text: 'Button 2' },
-    { id: 3, text: 'Button 3' },
-    { id: 4, text: 'Button 4' },
+    { id: 0, text: 'Button 1' },
+    { id: 1, text: 'Button 2' },
+    { id: 2, text: 'Button 3' },
+    { id: 3, text: 'Button 4' },
 ]
 
-const scores = ref([0, 0, 0, 0])
-const totalScore = computed(() => scores.value.reduce((acc, score) => acc + score, 0))
+const { scores, totalScore, lastTapId } = storeToRefs(tapScoreStore)
 
 const reset = () => {
-    scores.value = [0, 0, 0, 0]
-}
-
-const handleStrike = ({ id, datetime }) => {
-    const index = buttons.findIndex(button => button.id === id)
-    if (index !== -1) {
-        scores.value[index] += 1
-        console.log(`Button ${id} struck at ${datetime}. New score: ${scores.value[index]}`)
-    }
+    tapScoreStore.resetScore()
 }
 
 </script>
