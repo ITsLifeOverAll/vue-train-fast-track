@@ -92,6 +92,14 @@ const routes = [
     },
   },
   {
+    path: '/promise',
+    name: 'promise',
+    component: () => import('@/views/PromiseView.vue'),
+    meta: {
+      title: 'Promise 示範',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),

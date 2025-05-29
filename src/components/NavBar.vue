@@ -41,6 +41,9 @@
                         <RouterLink to="/tap" class="navbar-item">
                             點點看 (Slot, emit)
                         </RouterLink>
+                        <RouterLink to="/promise" class="navbar-item">
+                            Promise 練習
+                        </RouterLink>
                     </div>
                 </div>
 
