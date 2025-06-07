@@ -45,7 +45,7 @@
                             Promise 練習
                         </RouterLink>
                         <RouterLink to="/apidemo" class="navbar-item">
-                            API 呼叫練習
+                            API 呼叫練習 (async/await)
                         </RouterLink>
                         <RouterLink to="/async" class="navbar-item">
                             Async/Await 練習
