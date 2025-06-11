@@ -116,6 +116,14 @@ const routes = [
     },
   },
   {
+    path: '/transition',
+    name: 'transition',
+    component: () => import('@/views/TransitionView.vue'),
+    meta: {
+      title: '轉場效果',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
