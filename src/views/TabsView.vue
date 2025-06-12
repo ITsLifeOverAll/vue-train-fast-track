@@ -10,7 +10,9 @@
             </ul>
         </div>
         <KeepAlive>
-            <component :is="tabs[currentIndex].component" />
+            <Transition name="fade" mode="out-in">
+                <component :is="tabs[currentIndex].component" />
+            </Transition>
         </KeepAlive>
     </div>
 </template>
@@ -35,3 +37,15 @@ const tabClicked = (index) => {
 };
 
 </script>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+}
+</style>
