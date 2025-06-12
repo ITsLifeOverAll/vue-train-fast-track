@@ -53,6 +53,10 @@
                         <RouterLink to="/transition" class="navbar-item">
                             轉場效果 (Transition)
                         </RouterLink>
+                        <RouterLink to="/watch" class="navbar-item">
+                            Watch 練習 (Watch, watchEffect)
+                        </RouterLink>
+
                     </div>
                 </div>
 
