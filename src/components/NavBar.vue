@@ -59,6 +59,9 @@
                         <RouterLink to="/composables" class="navbar-item">
                             Composables 練習
                         </RouterLink>
+                        <RouterLink to="/modal" class="navbar-item">
+                            Modal 對話窗
+                        </RouterLink>
 
                     </div>
                 </div>

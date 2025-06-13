@@ -140,6 +140,14 @@ const routes = [
     },
   },
   {
+    path: '/modal',
+    name: 'modal',
+    component: () => import('@/views/ModalView.vue'),
+    meta: {
+      title: 'Modal 示範',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),
