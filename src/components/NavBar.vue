@@ -56,6 +56,9 @@
                         <RouterLink to="/watch" class="navbar-item">
                             Watch 練習 (Watch, watchEffect)
                         </RouterLink>
+                        <RouterLink to="/composables" class="navbar-item">
+                            Composables 練習
+                        </RouterLink>
 
                     </div>
                 </div>
