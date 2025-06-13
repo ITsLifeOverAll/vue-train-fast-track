@@ -4,16 +4,22 @@
             <div class="modal-background"></div>
             <div class="modal-card">
                 <header class="modal-card-head">
-                    <p class="modal-card-title">Modal title</p>
+                    <slot name="header">
+                        <p class="modal-card-title"
+                            style="color: red; font-weight: bold; background: #fff3cd; padding: 8px; border-radius: 4px;">
+                            請父元件提供 header slot
+                        </p>
+                    </slot>
                 </header>
                 <section class="modal-card-body">
-                    <!-- Content ... -->
+                    <slot> 請父元件提供預設 slot 的內容 </slot>
                 </section>
                 <footer class="modal-card-foot">
-                    <div class="buttons">
-                        <button class="button is-success" @click="showModal = false">Save changes</button>
-                        <button class="button" @click="showModal = false">Cancel</button>
-                    </div>
+                    <slot name="footer">
+                        <div class="buttons">
+                            <button class="button" @click="showModal = false">OK</button>
+                        </div>
+                    </slot>
                 </footer>
             </div>
         </div>
