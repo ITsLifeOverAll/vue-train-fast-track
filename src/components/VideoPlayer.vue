@@ -8,6 +8,7 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
+import zhTW from '@/languages/videojs/zh-TW.json'
 
 const props = defineProps({
     options: {
@@ -15,6 +16,8 @@ const props = defineProps({
         default: () => ({})
     }
 })
+
+videojs.addLanguage('zh-TW', zhTW)
 
 const videoPlayer = ref(null)
 let player = null
