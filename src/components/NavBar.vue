@@ -62,6 +62,9 @@
                         <RouterLink to="/modal" class="navbar-item">
                             Modal 對話窗
                         </RouterLink>
+                        <RouterLink to="/video" class="navbar-item">
+                            Video 示範 (videojs)
+                        </RouterLink>
 
                     </div>
                 </div>
