@@ -156,6 +156,14 @@ const routes = [
     },
   },
   {
+    path: '/youtube',
+    name: 'youtube',
+    component: () => import('@/views/YoutubeView.vue'),
+    meta: {
+      title: 'YouTube 示範',
+    },
+  },
+  {
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: () => import('@/views/NotFoundView.vue'),

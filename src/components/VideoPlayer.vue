@@ -9,6 +9,7 @@ import { ref, onMounted, onBeforeUnmount } from 'vue'
 import videojs from 'video.js'
 import 'video.js/dist/video-js.css'
 import zhTW from '@/languages/videojs/zh-TW.json'
+import 'videojs-youtube'
 
 const props = defineProps({
     options: {

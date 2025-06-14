@@ -65,6 +65,9 @@
                         <RouterLink to="/video" class="navbar-item">
                             Video 示範 (videojs)
                         </RouterLink>
+                        <RouterLink to="/youtube" class="navbar-item">
+                            YouTube 示範 (videojs-youtube)
+                        </RouterLink>
 
                     </div>
                 </div>
