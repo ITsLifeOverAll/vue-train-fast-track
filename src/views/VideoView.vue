@@ -2,7 +2,9 @@
     <div>
         <div class="container is-max-desktop">
             <h1 class="title is-4 has-text-centered">影片置中</h1>
-            <VideoPlayer :options="videoOptions" />
+            <div class="has-text-centered">
+                <VideoPlayer :options="videoOptions" />
+            </div>
         </div>
     </div>
 </template>
@@ -16,7 +18,7 @@ const videoOptions = ref({
     controls: true,
     sources: [
         {
-            src: '/path/to/video.mp4',
+            src: 'https://videos.pexels.com/video-files/32495488/13857041_640_360_30fps.mp4',
             type: 'video/mp4'
         }
     ]

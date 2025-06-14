@@ -7,6 +7,7 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 import videojs from 'video.js'
+import 'video.js/dist/video-js.css'
 
 const props = defineProps({
     options: {
@@ -29,6 +30,7 @@ onMounted(() => {
 onBeforeUnmount(() => {
     if (player) {
         player.dispose()
+        player = null
     }
 })
 </script>
