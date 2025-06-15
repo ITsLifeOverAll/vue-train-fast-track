@@ -1,5 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router'
 import { useUserStore } from '@/stores/user.js'
+import { createWebHashHistory } from 'vue-router'
 
 import HomeView from '@/views/HomeView.vue'
 import AboutView from '@/views/AboutView.vue'
@@ -171,7 +172,7 @@ const routes = [
 ]
 
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 })
 
