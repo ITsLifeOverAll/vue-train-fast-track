@@ -1,0 +1,1 @@
+import{_ as s,a as t,b as o,o as c}from"./index-B1yLXxvv.js";const n={},r={class:"container"};function a(i,e){return c(),t("div",r,e[0]||(e[0]=[o("h1",{class:"subtitle is-3"}," 請由左方選擇產品",-1)]))}const d=s(n,[["render",a]]);export{d as default};
