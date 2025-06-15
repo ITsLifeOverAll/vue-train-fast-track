@@ -1,7 +1,7 @@
 export default [
   {
     id: 1,
-    imageUrl: `${import.meta.env.BASE_URL}/bacon-eggs-500-250.jpg`,
+    imageUrl: `${import.meta.env.BASE_URL}bacon-eggs-500-250.jpg`,
     name: 'Bacon Eggs',
     description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse, nulla!',
     price: 14,
